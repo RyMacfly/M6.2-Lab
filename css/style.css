@@ -16,7 +16,41 @@ article {
   height: 297mm;
   margin: 20px auto;
   position: relative;
+  border-top: 1mm solid black;
+  border-bottom: 1mm solid black;
+  background-color: white;
+  font-family: "Open Sans", "Arial", "sans-serif";
+  /* Ensures the background isn't transparent */
+
+  /* Fallback for older browsers: only the top image */
+  background-image: url('../img/top-image.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+
+  /* Full declaration with gradient overlay and both images for modern browsers */
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.33) 0%,
+      /* Darker at the top */
+      rgba(0, 0, 0, 0) 20%,
+      /* Transparent starting below the top */
+      rgba(0, 0, 0, 0) 80%,
+      /* Transparent almost until the bottom */
+      rgba(0, 0, 0, 0.33) 100%
+      /* Darker at the bottom */
+    ),
+    url('../img/top-image.png'),
+    /* Top image */
+    url('../img/bottom-image.png');
+  /* Bottom image */
+
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: top center, top center, bottom center;
+  background-size: contain, contain, contain;
+
+
 }
+
 
 address {
   position: absolute;
@@ -36,6 +70,112 @@ h1 {
   padding: 44px 0;
   color: white;
   text-shadow: 1px 1px 1px black;
+
+  background-image: url('../img/logo.png');
+  /* filter: drop-shadow(5px 5px 5px black); */
+  box-shadow: 5px 5px 5px black;
+  border-radius: 50%;
 }
 
-/* Your CSS below here */
+.langs {
+  text-align: center;
+}
+
+.langs a{
+  color: black;
+  font-size: 12px;
+  padding: 0 5px 0 5px;
+}
+
+.langs a:hover {
+  color: red;
+}
+
+h2 {
+  font-family: 'Dauphin';
+  font-size: 60px;
+  text-align: center;
+  margin: 0;
+}
+
+h4 {
+  margin: 10px 10px 5px 10px;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  font-style: italic;
+  font-weight: 400;
+}
+
+h5 {
+  margin: 5px 10px 20px 10px;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  font-weight: 400;
+}
+
+hr {
+  clear: both;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,.75),rgba(0,0,0,0));
+}
+
+h3 {
+  font-family: "Dauphin";
+  margin: 0;
+  font-weight: 400;
+}
+
+.panes p {
+  font-size: 12px;
+  text-align: justify;
+}
+
+.panes {
+  padding: 0 50px 0 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates two equal columns */
+  gap: 20px; /* Space between the grid items */
+  margin: 20px 0; /* Optional: Add some margin around the grid */
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column; /* Arrange radio buttons in a column */
+}
+
+.radio-group label {
+  cursor: pointer; /* Change cursor to pointer for better UX */
+  
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 10px; /* Space between radio and label text */
+}
+
+.radio-group label:hover {
+  background-color: #e0e0e0; /* Darker gray on hover */
+}
+
+.radio-group input[type="radio"]:checked + span {
+  color: #ffffff; /* Change text color for the selected radio button */
+  background-color: #007BFF; /* Change background color for selected radio button */
+  border-radius: 4px; /* Rounded corners for selected radio button */
+}
+
+.button {
+ 
+  margin-bottom: 10px; /* Space between the button and radio buttons */
+  padding: 10px 20px; /* Button padding */
+  background-color: #007BFF; /* Button color */
+  color: white; /* Button text color */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

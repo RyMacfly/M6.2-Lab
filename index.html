@@ -1,24 +1,115 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Fancy letterheaded paper</title>
-    
-  </head>
-  <body>
 
-    <article>
-      <h1>Awesome<br>Company</h1>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Fancy letterheaded paper</title>
+  <link href="https://db.onlinewebfonts.com/c/5ebc67ab9ab9e86517c65dd6ac7c85aa?family=Dauphin" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
 
-      <address>
-        <p>The Awesome Company</p>
-        <p>102-112 Frail Bend Bridge<br>
+    <script type="text/javascript">
+      // Function to show the selected option
+      function showSelectedOption() {
+          // Get all radio buttons with name 'options'
+          const options = document.querySelectorAll('input[name="options"]');
+          let selectedValue;
+
+          // Loop through the options to find the checked radio button
+          options.forEach((option) => {
+              if (option.checked) {
+                  selectedValue = option.value; // Store the selected value
+              }
+          });
+
+          // Show an alert with the selected option value
+          if (selectedValue) {
+              alert(`Selected option: ${selectedValue}`);
+          } else {
+              alert('No option selected');
+          }
+      }
+  </script>
+  
+</head>
+
+<body>
+
+  <article>
+    <h1>Awesome<br>Company</h1>
+    <div class="banner" style="min-height:200px"></div>
+    <div class="langs">
+
+      <a href="">Español</a>
+      <a href="">Svenska</a>
+      <a href="">ไทย</a>
+      <a href="">Türkçe</a>
+      <a href="">Українська</a>
+      <a href="">Tiếng Việt</a>
+
+    </div>
+
+    <h2>Lorem Ipsum</h2>
+    <h4>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</h4>
+    <h5>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+    </h5>
+    <hr>
+
+    <div class="panes">
+      <div>
+        <h3>What is Lorem Ipsum?</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget metus at orci sagittis congue sed eu magna. In mollis risus ac faucibus ornare. Quisque vulputate nunc egestas lectus imperdiet tristique. Maecenas lobortis felis nec sem lacinia porta. Maecenas lorem magna, condimentum sit amet tempus non, sollicitudin vel lorem. Nulla vel arcu nunc. Etiam vestibulum bibendum augue. Phasellus eget lorem tristique nibh tristique ornare. </p>
+      </div>
+      <div><h3>Why do we use it?</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget metus at orci sagittis congue sed eu magna. In mollis risus ac faucibus ornare. Quisque vulputate nunc egestas lectus imperdiet tristique. Maecenas lobortis felis nec sem lacinia porta. Maecenas lorem magna, condimentum sit amet tempus non, sollicitudin vel lorem. Nulla vel arcu nunc. Etiam vestibulum bibendum augue. Phasellus eget lorem tristique nibh tristique ornare. </p>
+      </div>
+      <div><h3>Where does it come from?</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget metus at orci sagittis congue sed eu magna. In mollis risus ac faucibus ornare. Quisque vulputate nunc egestas lectus imperdiet tristique. Maecenas lobortis felis nec sem lacinia porta. Maecenas lorem magna, condimentum sit amet tempus non, sollicitudin vel lorem. Nulla vel arcu nunc. Etiam vestibulum bibendum augue. Phasellus eget lorem tristique nibh tristique ornare. </p>
+      </div>
+      <div><h3>Where can I get some?</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget metus at orci sagittis congue sed eu magna. In mollis risus ac faucibus ornare. Quisque vulputate nunc egestas lectus imperdiet tristique. Maecenas lobortis felis nec sem lacinia porta. Maecenas lorem magna, condimentum sit amet tempus non, sollicitudin vel lorem. Nulla vel arcu nunc. Etiam vestibulum bibendum augue. Phasellus eget lorem tristique nibh tristique ornare. </p>
+        
+        <div class="radio-group">
+          <script src="js/main.js"></script>
+          <button class="button" id="alertButton" onclick="showSelectedOption()">Show Selected Option</button>
+
+          <label>
+              <input type="radio" name="options" value="Cows have best friends and become stressed when separated from them.">
+              Fun Fact 1
+          </label>
+          <label>
+              <input type="radio" name="options" value="A group of flamingos is called a 'flamboyance.'">
+              Fun Fact 2
+          </label>
+          <label>
+              <input type="radio" name="options" value="Kangaroos can't walk backward due to their large tails and body structure.">
+              Fun Fact 3
+          </label>
+          <label>
+              <input type="radio" name="options" value="A day on Venus is longer than a year on Venus; it takes about 243 Earth days to rotate once but only 225 Earth days to orbit the Sun.">
+              Fun Fact 4
+          </label>
+      </div>
+
+      </div>
+    </div>
+
+
+
+
+    <address>
+      <p>The Awesome Company</p>
+      <p>102-112 Frail Bend Bridge<br>
         The Dwindlings<br>
         Little Hornet<br>
         HX3 9ZQ<br>
         UK</p>
-      </address>
-    </article>
-  </body>
+    </address>
+  </article>
+</body>
+
 </html>
